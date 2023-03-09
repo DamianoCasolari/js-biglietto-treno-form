@@ -2,6 +2,7 @@ const age = document.getElementById("age1");
 
 
 const km = document.querySelector(".km_input");
+const nameEl = document.querySelector(".name_input");
 
 const clickForTicketEl = document.querySelector('.btn_for_a_ticket');
 clickForTicketEl.addEventListener('click', printTicket);
@@ -23,5 +24,6 @@ if (age.value == "underage") {
 let discounted_price_with_decimal = discounted_price.toFixed(2);
 
 console.log(`il costo del biglietto ammonta a ${discounted_price_with_decimal} euro`);
+
 
 }
