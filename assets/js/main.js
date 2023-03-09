@@ -5,6 +5,7 @@ const typeTicketEl = document.querySelector(".type_ticket");
 const trainCarriageEl = document.querySelector(".train_carriage");
 const cpCodeEL = document.querySelector(".CP_code");
 const priceTicketEl = document.querySelector(".price_ticket");
+const discountTicketEl = document.querySelector(".discount_ticket");
 const finalTicketEl = document.querySelector(".final_ticket");
 const btnToResetEl = document.querySelector(".btn_to_reset");
 
@@ -37,7 +38,15 @@ function printTicket(event) {
     document.querySelector(".first_second_name").innerHTML = nameEl.value;
     trainCarriageEl.innerHTML = Math.floor(Math.random() * 10 + 1);
     cpCodeEL.innerHTML = Math.floor(Math.random() * 100000);
-    priceTicketEl.innerHTML = `Prezzo biglietto : ${discounted_price_with_decimal} euro`;
+
+
+    if (age.value == "underage" || age.value == "over_65") {
+        priceTicketEl.innerHTML = `Prezzo biglietto : ${discounted_price_with_decimal}€ `;
+        discountTicketEl.innerHTML = `anzinchè ${km_price}€`;
+    } else {
+        priceTicketEl.innerHTML = `Prezzo biglietto : ${discounted_price_with_decimal}€`;
+
+    }
 
     // D-none 
 
@@ -46,6 +55,6 @@ function printTicket(event) {
 
 }
 
-btnToResetEl.addEventListener('click', function(){
+btnToResetEl.addEventListener('click', function () {
     window.location.reload()
 });
