@@ -6,6 +6,7 @@ const trainCarriageEl = document.querySelector(".train_carriage");
 const cpCodeEL = document.querySelector(".CP_code");
 const priceTicketEl = document.querySelector(".price_ticket");
 const finalTicketEl = document.querySelector(".final_ticket");
+const btnToResetEl = document.querySelector(".btn_to_reset");
 
 const clickForTicketEl = document.querySelector('.btn_for_a_ticket');
 clickForTicketEl.addEventListener('click', printTicket);
@@ -44,3 +45,7 @@ function printTicket(event) {
 
 
 }
+
+btnToResetEl.addEventListener('click', function(){
+    window.location.reload()
+});
