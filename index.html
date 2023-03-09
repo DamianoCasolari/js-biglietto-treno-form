@@ -21,7 +21,30 @@
 </head>
 
 <body>
-
+    <div class="card w-75 m-auto mt-5 p-3 text-center align-items-center">
+        <div class="row align-middle justify-content-center">
+            <div class="m-3 col-3">
+                <label for="Inputname" class="form-label">Nome e cognome</label>
+                <input type="number" class="form-control age_input" id="Inputname" aria-describedby="emailHelp">
+            </div>
+            <div class="m-3 col-3">
+                <label for="input_km_trip" class="form-label">Kilometri da percorerre</label>
+                <input type="number" class="form-control km_input" id="input_km_trip">
+            </div>
+            <div class="m-3 col-3">
+                <label for="age" class="form-label">Fascia d'età</label>
+                <select name="age" id="age">
+                    <option value="underage">Minorenne</option>
+                    <option value="over_65">Ho più di 65 anni</option>
+                    <option value="18_65">Ho tra i 18 e i 65 anni</option>
+                </select>
+            </div>
+        </div>
+        <div class="button_area mt-3">
+            <button type="button" class="btn btn-primary btn_for_ticket m-2">Calcola</button>
+            <button type="button" class="btn btn-warning btn_for_reset m-2">Reset</button>
+        </div>
+    </div>
 
     <script src="./assets/js/main.js"></script>
 </body>
