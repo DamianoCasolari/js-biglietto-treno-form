@@ -12,9 +12,9 @@ function printTicket(event){
 console.log(km_price);
 
 let discounted_price;
-if (age.value = "underage") {
+if (age.value == "underage") {
     discounted_price = km_price / 100 * 80 ;
-} else if (age.value = "over_65" ){
+} else if (age.value == "over_65" ){
     discounted_price = km_price / 100 * 60 ;
 } else {
     discounted_price = km_price;
